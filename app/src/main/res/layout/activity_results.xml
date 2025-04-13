@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This XML layout defines the screen for showing the final results in the MilkyWeigh app, specifically, the ResultsActivity.
+It's built using a vertical LinearLayout with padding and a custom space-themed background (@drawable/backgroundresult).
+At the top, there's a ScrollView that allows users to scroll through the results if there are many.
+Inside the scroll view, a TableLayout is used to organize data in rows and columns.
+The first row acts as a header with bold labels for the planet name, weight, and description.
+Below that, more rows get added in the code. There's also a TextView (with ID resultsTextView) to display text-based results if needed.
+At the bottom of the screen, a centered Retry button lets users go back and try again. It’s styled with a dark purple background and white text to match the app’s cosmic aesthetic. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="28dp"
+    android:background="@drawable/backgroundresult">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TableLayout
+            android:id="@+id/resultsTableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:text="@string/planet"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/orbitron_bold"
+                    android:textColor="#4f518c"/>
+
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/weight_label"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/orbitron_bold"
+                    android:textColor="#4f518c"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="@string/description_label"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/orbitron_bold"
+                    android:textColor="#4f518c"/>
+            </TableRow>
+
+            <TextView
+                android:id="@+id/resultsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#967aa1"
+                android:gravity="center" />
+
+        </TableLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/retryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/retry"
+        android:backgroundTint="#5f506b"
+        android:textColor="#ffffff"
+        android:padding="12dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

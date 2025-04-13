@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This activity_main XML file defines the layout for the main screen of the MilkyWeigh app, where users input their weight.
+It's built using a RelativeLayout as the outer container, with a space-themed background image (@drawable/backgroundinput).
+Inside it, there's a vertically stacked LinearLayout that holds a title ("Milky Weigh"), an EditText for the user to enter their weight, a Submit button to process it, and a TextView to show the result.
+At the bottom-right corner of the screen, there’s a floating-style Info button with custom styling that once clicked, it shows user app instruction.
+The layout uses custom fonts, colors, and drawable styles to give the app a balanced, creative look while keeping it user-friendly. -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="60dp"
+    android:background="@drawable/backgroundinput">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/milky_weigh"
+            android:fontFamily="@font/orbitron_bold"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="#f5e6e8"/>
+
+        <EditText
+            android:id="@+id/weightInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/enter_your_weight"
+            android:layout_marginTop="50dp"
+            android:inputType="numberDecimal"
+            android:autofillHints="weight"
+            android:minHeight="48dp"
+            android:textColor="#231942"
+            android:background="@drawable/input_background"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_bg"/>
+
+        <TextView
+            android:id="@+id/results"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/infoButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="@string/info"
+        android:textSize="25sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="0dp"
+        android:background="@drawable/infobutton_bg"
+        android:elevation="8dp"
+        android:translationZ="4dp"/>
+</RelativeLayout>

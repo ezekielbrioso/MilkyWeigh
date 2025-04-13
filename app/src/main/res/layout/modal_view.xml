@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This modal_view XML file is for a custom modal dialog in the MilkyWeigh app, which shows instructions or helpful information when the user taps the info button.
+It uses a vertical LinearLayout with soft padding and a light pinkish background (#f5e6e8) to keep it clean and readable.
+At the top is a bold TextView titled "App Instructions" (using the custom orbitron_bold font),
+followed by another TextView that contains the actual instruction text (@string/instructions_text) in a friendly font (nunito_regular).
+At the bottom is a large “Close” button that spans the width of the dialog, letting users dismiss it when they’re done. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f5e6e8"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/modalTitle"
+        android:fontFamily="@font/orbitron_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_instructions"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#231942"/>
+
+    <TextView
+        android:id="@+id/modalContent"
+        android:fontFamily="@font/nunito_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/instructions_text"
+        android:textColor="#5e548e"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/closeButton"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/close"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#967aa1"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:textStyle="bold"/>
+</LinearLayout>
