@@ -69,7 +69,7 @@ class ResultsActivity : AppCompatActivity() {
 
             ).apply {
                 setMargins(0, 20, 0, 20)
-                setBackgroundColorWithRadius("#f5e6e8", 10f)
+                setBackgroundColorWithRadius("#1A1A2ECC", 40f)
             }
             setPadding(10,20,10,20)
 
@@ -81,21 +81,21 @@ class ResultsActivity : AppCompatActivity() {
             textSize = 15f
             setTypeface(null, Typeface.BOLD)
             setPadding(20, 10, 10, 20)
-            setTextColor(Color.parseColor("#533747"))
+            setTextColor(Color.parseColor("#4B2E6D"))
         }
 
         val weightTextView = TextView(this).apply {
             text = weight
             layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1.5f)
             setPadding(16, 16, 16, 20)
-            setTextColor(Color.parseColor("#533747"))
+            setTextColor(Color.parseColor("#4B2E6D"))
         }
 
         val descTextView = TextView(this).apply {
             text = description
             layoutParams = TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 3f)
             setPadding(16, 16, 16, 20)
-            setTextColor(Color.parseColor("#533747"))
+            setTextColor(Color.parseColor("#4B2E6D"))
         }
 
         row.addView(nameTextView)
